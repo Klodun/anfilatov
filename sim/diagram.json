@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "author": "Анфилатов Ярик, вариант 1",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 30, "left": 230, "attrs": {} },
+    { "type": "wokwi-ntc-temperature-sensor", "id": "ntc", "top": -100, "left": -30, "attrs": { "temperature": "25" } },
+    { "type": "wokwi-dht22", "id": "dht", "top": 40, "left": -40, "attrs": { "humidity": "61", "temperature": "24" } },
+    { "type": "wokwi-potentiometer", "id": "soil", "top": 230, "left": -20, "attrs": { "value": "460" } },
+    { "type": "wokwi-relay-module", "id": "relay", "top": 10, "left": 590, "attrs": { "transistor": "npn" } },
+    { "type": "wokwi-led", "id": "led", "top": 230, "left": 570, "attrs": { "color": "red" } },
+    { "type": "wokwi-resistor", "id": "r1", "top": 220, "left": 460, "attrs": { "value": "300" } },
+    { "type": "wokwi-resistor", "id": "rpull", "top": -80, "left": 80, "attrs": { "value": "10000" } }
+  ],
+  "connections": [
+    ["uno:5V", "ntc:VCC", "red", []], ["uno:GND.1", "ntc:GND", "black", []],
+    ["uno:5V", "dht:VCC", "red", []], ["uno:GND.1", "dht:GND", "black", []],
+    ["uno:5V", "soil:VCC", "red", []], ["uno:GND.1", "soil:GND", "black", []],
+    ["uno:5V", "relay:VCC", "red", []], ["uno:GND.1", "relay:GND", "black", []],
+    ["ntc:OUT", "uno:A0", "green", []], ["soil:SIG", "uno:A1", "green", []],
+    ["dht:SDA", "uno:2", "green", []], ["uno:5V", "rpull:1", "red", []],
+    ["rpull:2", "dht:SDA", "green", []], ["uno:7", "relay:IN", "green", []],
+    ["uno:8", "r1:1", "green", []], ["r1:2", "led:A", "green", []],
+    ["led:C", "uno:GND.2", "black", []]
+  ],
+  "dependencies": {}
+}
