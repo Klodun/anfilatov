@@ -1,0 +1,26 @@
+Анфилатов Ярик@anfilatov % sqlite3 -header -column db/variant.db ".read db/queries.sql"
+id  n   t_s  sensor  value
+--  --  ---  ------  -----
+72  24  24   s3      44.97
+71  24  24   s2      61.0 
+70  24  24   s1      25.02
+69  23  23   s3      44.97
+68  23  23   s2      61.0 
+67  23  23   s1      25.02
+66  22  22   s3      44.97
+65  22  22   s2      61.0 
+64  22  22   s1      25.02
+63  21  21   s3      44.97
+sensor  min_v  avg_v  max_v
+------  -----  -----  -----
+s1      25.02  25.02  25.02
+s2      61.0   61.0   61.0 
+s3      14.66  37.39  44.97
+id  n   t_s  type       message
+--  --  ---  ---------  -------
+1   11  11   THRESHOLD         
+2   17  17   NORMAL            
+tbl       cnt
+--------  ---
+readings  72 
+events    2  

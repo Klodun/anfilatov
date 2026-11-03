@@ -1,0 +1,6 @@
+Анфилатов Ярик@anfilatov % wc -l data/log.txt
+26 data/log.txt
+Анфилатов Ярик@anfilatov % touch data/log.txt   # повторная загрузка
+Анфилатов Ярик@anfilatov % sqlite3 db/variant.db "SELECT COUNT(*) FROM readings; SELECT COUNT(*) FROM events;"
+72
+2
