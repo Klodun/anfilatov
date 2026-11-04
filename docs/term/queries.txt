@@ -1,4 +1,4 @@
-Анфилатов Ярик@anfilatov % sqlite3 -header -column db/variant.db ".read db/queries.sql"
+Анфилатов Ярослав@anfilatov % sqlite3 -header -column db/variant.db ".read db/queries.sql"
 id  n   t_s  sensor  value
 --  --  ---  ------  -----
 72  24  24   s3      44.97

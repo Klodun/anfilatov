@@ -1,7 +1,7 @@
-Анфилатов Ярик@anfilatov % cat data/log_fault.txt
+Анфилатов Ярослав@anfilatov % cat data/log_fault.txt
 DATA n=1 s1=999 s2=61.00 s3=44.97
-Анфилатов Ярик@anfilatov % cp data/log_fault.txt data/log.txt
-Анфилатов Ярик@anfilatov % sqlite3 -header -column db/variant.db "SELECT id,n,t_s,type,message FROM events;"
+Анфилатов Ярослав@anfilatov % cp data/log_fault.txt data/log.txt
+Анфилатов Ярослав@anfilatov % sqlite3 -header -column db/variant.db "SELECT id,n,t_s,type,message FROM events;"
 id  n  t_s  type   message                
 --  -  ---  -----  -----------------------
 1   1  1    FAULT  датчик s1 вне диапазона
